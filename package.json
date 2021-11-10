@@ -1,0 +1,24 @@
+{
+  "name": "bpa-webapp-2021",
+  "version": "1.0.0",
+  "description": "Just a simple node server template to use as a foundation for other projects. Should also contain a description of what does what for the server for ease of modification.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cdubles102403/BPA-webapp-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cdubles102403/BPA-webapp-2021/issues"
+  },
+  "homepage": "https://github.com/Cdubles102403/BPA-webapp-2021#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "express": "^4.17.1"
+  }
+}
