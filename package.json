@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "make": "openssl genrsa -out SSLCerts/key.pem && openssl req -new -key SSLCerts/key.pem -out SSLCerts/csr.pem && openssl x509 -req -days 9999 -in SSLCerts/csr.pem -signkey SSLCerts/key.pem -out SSLCerts/cert.pem && rm SSLCerts/csr.pem && npm i && npx nodemon server.js"
   },
   "repository": {
     "type": "git",
