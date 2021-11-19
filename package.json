@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Cdubles102403/BPA-webapp-2021#readme",
   "dependencies": {
     "chalk": "^4.1.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "sqlite3": "^5.0.2"
   }
 }
