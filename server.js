@@ -6,7 +6,7 @@ const express = require('express')
 const chalk = require('chalk')
 const https = require('https')
 const fs = require('fs')
-
+const sanitize = require('./resuables/sanitize.js')
 const credentials = {
     key: fs.readFileSync('SSLCerts/key.pem'),
     cert: fs.readFileSync('SSLCerts/cert.pem')
@@ -23,12 +23,24 @@ const PORT = 443
  */
 app.use(express.static('public'))
 app.use(express.static('views'))
-
+app.use(express.json())
 /**
  * Sends index.html when someone connects on the default root.
  */
 app.get("/", (req, res) => {
     res.send('index.html')
+})
+
+app.post("/login",(req,res)=>{
+console.log(req.body)
+
+  let username = sanitize.sanitize(req.body.Username)
+  let password = sanitize.sanitize(req.body.Password)
+
+  console.log(chalk.red(username) +" : "+ chalk.blue(password))
+
+  let sqlFindAccount = ''
+  res.send("request complete")
 })
 
 /**
