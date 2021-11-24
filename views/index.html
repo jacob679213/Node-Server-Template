@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1></h1>
-    <div id=''></div>
-    <div id='signIn'>
+    <div id="switch">
+      <button id="signInSwitch">sign In</button>
+      <button id="signUpSwitch">sign Up</button>
+    </div>
+    <div id="signUp" class="container" hidden>
+      <label for="Fname">First Name: </label>
+      <input type="text" id="Fname" name="FName" /> <br />
+      <label for="Lname">Last Name: </label>
+      <input type="text" id="Lname" name="Lname" /> <br />
+      <label for="signUsername">Username: </label>
+      <input type="text" id="signUsername" name="signUsername" /> <br />
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email" /> <br />
+      <label for="signPassword">Password: </label>
+      <input type="password" name="signPassword" id="signPassword" /> <br />
+      <button id="signUpSubmit">Sign Up</button>
+    </div>
 
-        <label for="username">username: </label>
-        <input type="text" name="username" id="username"> <br>
-        <label for="password">password: </label>
-        <input type="password" name='password' id='password'> <br>
-        <button id='signIn'>sign in</button>
-
+    <div id="signIn" class="container">
+      <label for="username">username: </label>
+      <input type="text" name="username" id="username" /> <br />
+      <label for="password">password: </label>
+      <input type="password" name="password" id="password" /> <br />
+      <button id="signInSubmit">Sign In</button>
     </div>
     <script src="client.js"></script>
-</body>
+  </body>
 </html>
