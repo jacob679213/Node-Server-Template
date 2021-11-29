@@ -3,8 +3,8 @@ body {
   background-color: gray;
 }
 
-.container {
-  width: 500px;
+div.container {
+  width: 350px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -12,4 +12,9 @@ body {
   padding: 15px;
   background-color: red;
   border-radius: 10px;
+}
+
+input.signupInput {
+  position: relative;
+  margin: 5px;
 }
