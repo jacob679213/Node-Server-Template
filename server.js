@@ -9,6 +9,7 @@ const fs = require("fs");
 const sql = require("sqlite3");
 const bcrypt = require("bcrypt");
 const sanitize = require("./resuables/sanitize.js");
+const JWT = require('./resuables/JWTFunctions.js')
 const credentials = {
   key: fs.readFileSync("SSLCerts/key.pem"),
   cert: fs.readFileSync("SSLCerts/cert.pem"),
