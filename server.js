@@ -89,7 +89,6 @@ app.post("/signup", (req, res) => {
         })
     });
 });
-  
   res.send('sign up')
 });
 
