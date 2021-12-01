@@ -73,23 +73,33 @@ app.post("/login", (req, res) => {
 //post request for signing up
 app.post("/signup", (req, res) => {
   let insertUserSQL = 'INSERT INTO accounts(username,Fname,Lname,email,password) values(?,?,?,?,?)'
-
+  let checkUserSQL = 'SELECT * FROM accounts WHERE username =?'
   //get all user data
   let username = sanitize.sanitize(req.body.username);
   let Fname = sanitize.sanitize(req.body.Fname);
   let Lname = sanitize.sanitize(req.body.Lname);
   let password = sanitize.sanitize(req.body.password);
   let email = sanitize.sanitize(req.body.email);
-  //encrypt sensative data
-  bcrypt.genSalt(saltRounds, function(err, salt) {
-    bcrypt.hash(password, salt, function(err, hash) {
-        //save data
-        db.run(insertUserSQL,[username,Fname,Lname,email,hash],(err)=>{
-          if(err) console.error(err)
-        })
+  
+  db.all(checkUserSQL,[username],(err,results)=>{
+    if(err) console.error(err)
+    console.log(results)
+    if(results[0] != undefined){
+      //username already exists
+      res.send({message:"account-taken"})
+       }
+    else{
+      bcrypt.genSalt(saltRounds, function(err, salt) {
+        bcrypt.hash(password, salt, function(err, hash) {
+            //save data
+            db.run(insertUserSQL,[username,Fname,Lname,email,hash],(err)=>{
+              if(err) console.error(err)
+              res.send({message:"account-made"})
+            })
+        });
     });
-});
-  res.send('sign up')
+    }
+  })  
 });
 
 /**
