@@ -1,6 +1,6 @@
 const JWT = require('jsonwebtoken')
 
-var tokens ={
+var token ={
     makeJWT : function(password,email,username){
         let payload ={
           password:password,
@@ -20,4 +20,6 @@ var tokens ={
       }
 }
 
-module.exports = tokens
+
+
+module.exports = token

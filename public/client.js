@@ -1,14 +1,4 @@
 $(function () {
-  //switch between sign in and sign up
-  $("button#signInSwitch").click(function () {
-    $("div#signIn").show();
-    $("div#signUp").hide();
-  });
-  $("button#signUpSwitch").click(function () {
-    $("div#signIn").hide();
-    $("div#signUp").show();
-  });
-
   //sign in
   $("button#signInSubmit").click(function () {
     //get login values

@@ -1,15 +1,27 @@
 /*Style.css file used by default in Index.html*/
 body {
-  background-color: gray;
+  background-color: #333333;
 }
 
-.container {
-  width: 500px;
+h1.title{
+  position: relative;
+  margin-left: auto; 
+  margin-right: auto;
+  text-align: center;
+}
+
+div.container {
+  width: 350px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   padding: 15px;
-  background-color: red;
+  background-color: #ffcc00;
   border-radius: 10px;
+}
+
+input.signupInput {
+  position: relative;
+  margin: 5px;
 }
