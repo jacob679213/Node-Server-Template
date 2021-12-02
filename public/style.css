@@ -12,7 +12,7 @@ h1.title{
 
 div.container {
   position: static;
-  width: 300px;
+  width: 350px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -36,15 +36,31 @@ input.signupInput {
   float: right;
 }
 
-button {
+button.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
+  width: auto;
   margin-top: 5px;
   margin-bottom: 5px;
   width: 75px;
-  height: 50px;
-  border-radius: 40%;
-  background-color: #eedd00;
+  height: 40px;
+  border: none;
+  background-color: #eebb00;
+  border-radius: 12px;
+  box-shadow: 0 7px #333;
+  transition-duration: 0.1s;
   /*background-color: #aa7700;*/
   
+}
+
+button.submit:hover {
+  background-color: #cc9900;
+}
+
+button.submit:active {
+  box-shadow: 0 3px #333;
+  transform: translateY(4px);
 }
