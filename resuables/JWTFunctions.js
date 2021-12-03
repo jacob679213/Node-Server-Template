@@ -1,5 +1,6 @@
 const JWT = require('jsonwebtoken')
 
+
 var token ={
     makeJWT : function(password,email,username){
         let payload ={
@@ -19,7 +20,6 @@ var token ={
         return decodedToken
       }
 }
-
 
 
 module.exports = token
