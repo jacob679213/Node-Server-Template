@@ -11,27 +11,44 @@
 
   <body>
     <div id="signUp" class="container">
-      <h1>Sign Up</h1>
+      <h1 class="title">Sign Up</h1>
 
       <div class="formContents">
-        <label for="Fname">First Name: </label>
-        <input class="signupInput" type="text" id="Fname" name="FName" /> <br />
+        <div class="formQuestion">  
+          <label for="Fname">First Name: </label>
+          <input class="signupInput" type="text" id="Fname" name="FName" /> <br />
+        </div>
 
-        <label for="Lname">Last Name: </label>
-        <input class="signupInput" type="text" id="Lname" name="Lname" /> <br />
+        <div class="formQuestion">
+          <label for="Lname">Last Name: </label>
+          <input class="signupInput" type="text" id="Lname" name="Lname" /> <br />
+        </div>
 
-        <label for="signUsername">Username: </label>
-        <input class="signupInput" type="text" id="signUsername" name="signUsername" /> <br />
+        <div class="formQuestion">
+          <label for="signUsername">Username: </label>
+          <input class="signupInput" type="text" id="signUsername" name="signUsername" /> <br />
+        </div>
 
-        <label for="email">Email: </label>
-        <input class="signupInput" type="email" name="email" id="email" /> <br />
+        <div class="formQuestion">
+          <label for="email">Email: </label>
+          <input class="signupInput" type="email" name="email" id="email" /> <br />
+        </div>
 
-        <label for="signPassword">Password: </label>
-        <input class="signupInput" type="password" name="signPassword" id="signPassword" /> <br />
+        <div class="formQuestion">
+          <label for="signPassword">Password: </label>
+          <input class="signupInput" type="password" name="signPassword" id="signPassword" /> <br />
+        </div>
 
-        <button id="signUpSubmit">Sign Up</button><br />
+        <div class="formQuestion">
+          <label for="passwordConfirm">Confirm Password: </label>
+          <input class="signupInput" type="password" name="passwordConfirm" id="passwordConfirm" /> <br />
+        </div>
 
-        <p>Already have an account? Log in <a href="login.html">here</a>.</p>
+        <div class="formQuestion">
+          <button id="signUpSubmit" class="submit">Sign Up</button><br />
+        </div>
+
+        <p style="text-align: center;">Already have an account? Log in <a href="login.html">here</a>.</p>
       </div>
     </div>
 
