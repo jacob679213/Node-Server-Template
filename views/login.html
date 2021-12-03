@@ -10,15 +10,21 @@
     <div id="signIn" class="container">
         <h1 class="title">Log In</h1>
 
-        <label for="username">Username: </label>
-        <input class="signupInput" type="text" name="username" id="username" /> <br />
-  
-        <label for="password">Password: </label>
-        <input class="signupInput" type="password" name="password" id="password" /> <br />
-  
-        <button id="signInSubmit">Sign In</button> <br />
+        <div class="formQuestion">
+            <label for="username">Username: </label>
+            <input class="signupInput" type="text" name="username" id="username" /> <br />
+        </div>
 
-        <p>Don't have an account? Sign up <a href="index.html">here</a>.</p>
+        <div class="formQuestion">
+            <label for="password">Password: </label>
+            <input class="signupInput" type="password" name="password" id="password" /> <br />
+        </div>
+
+        <div class="formQuestion">
+            <button id="signInSubmit" class="submit">Log In</button> <br />
+        </div>
+
+        <p style="text-align: center;">Don't have an account? Sign up <a href="index.html">here</a>.</p>
       </div>
 
       <script src="client.js"></script>
