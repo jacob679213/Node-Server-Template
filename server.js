@@ -55,16 +55,19 @@ app.post("/login", (req, res) => {
         console.log(result)
         if(result){
           //succesful login
-          res.send({message:"successful-login"})
+          console.log("good login")
+          res.send({message:"successful-login",redirect:"home"})
         }
         else{
           //unsuccesful login
+          console.log("bad login")
           res.send({message:'check-username-and-password'})
         }
     });
     }
     else{
       //user not found
+      console.log("bad login")
       res.send({message:"check-username-and-password"})
     }
   })
@@ -94,7 +97,7 @@ app.post("/signup", (req, res) => {
             //save data
             db.run(insertUserSQL,[username,Fname,Lname,email,hash],(err)=>{
               if(err) console.error(err)
-              res.send({message:"account-made"})
+              res.send({message:"account-made",redirect:"home"})
             })
         });
     });

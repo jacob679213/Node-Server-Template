@@ -19,7 +19,12 @@ $(function () {
     if (username != "" && password != "") {
       fetch("/login", payload)
         .then((res) => res.json())
-        .then((res) => console.log(res));
+        .then((res) => {
+          console.log(res)
+          if(res.redirect == 'home'){
+            window.location.href = "/home.html"
+          }
+        });
     }
   });
 
@@ -41,8 +46,13 @@ $(function () {
         },
       };
       fetch("/signup", payload)
-        .then((res) => res.json())
-        .then((res) => console.log(res));
+        .then(res => res.json())
+        .then((res)=>{
+          if(res.redirect == 'home'){
+            window.location.href = "/home.html"
+          }
+        })
+        
     }
     else{
       alert('passwords do not match')
