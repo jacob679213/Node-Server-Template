@@ -54,9 +54,11 @@ app.post("/login", (req, res) => {
         if(err2) console.error(err2)
         console.log(result)
         if(result){
+          let JWtoken = JWT.makeJWT(results[0].password,results[0].email,results[0].username)
+          console.log(JWtoken)
           //succesful login
           console.log("good login")
-          res.send({message:"successful-login",redirect:"home"})
+          res.send({message:"successful-login",redirect:"home",token:JWtoken})
         }
         else{
           //unsuccesful login
@@ -97,7 +99,8 @@ app.post("/signup", (req, res) => {
             //save data
             db.run(insertUserSQL,[username,Fname,Lname,email,hash],(err)=>{
               if(err) console.error(err)
-              res.send({message:"account-made",redirect:"home"})
+              let JWtoken = JWT.makeJWT(password,email,username)
+              res.send({message:"account-made",redirect:"home",token:JWtoken})
             })
         });
     });
