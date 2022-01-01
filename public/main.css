@@ -1,0 +1,12 @@
+body {
+    background-color: #333333;
+    color:#ffcc00;
+  }
+
+  button {
+    color:red;
+  }
+
+  div#header{
+    text-align: center;
+  }
