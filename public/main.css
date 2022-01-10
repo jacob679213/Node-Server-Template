@@ -3,10 +3,18 @@ body {
     color:#ffcc00;
   }
 
-  button {
-    color:red;
+  .headerButton {
+    font-size:20px;
+    border-radius:10px;
+    color:#4CAF50;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
+  .headerButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
   div#header{
     text-align: center;
   }
